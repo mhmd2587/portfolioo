@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>MHMD-DEV</title>
+  </head>
+  <body>
+    <span class="up show">⇫</span>
+    <section class="body">
+      <header class="header">
+        <nav class="navigition">
+          <ul>
+            <select onclick="openTranslation()" name="lang" id="langSelect">
+              <div class="selections">
+                <option data-i18n="en" value="en">English</option>
+                <option data-i18n="ar" value="ar">Arabic</option>
+              </div>
+            </select>
+            <a data-i18n="nav1" class="nav1 link-effect" href="#">MHMD</a>
+            <a data-i18n="nav2" class="nav2 link-effect" href="#MySkills">Skills</a>
+            <a data-i18n="nav3" class="nav3 link-effect" href="#Projects">Projects</a>
+            <a data-i18n="nav4" class="nav4 link-effect" href="#Contact">Contact</a>
+          </ul>
+        </nav>
+      </header>
+      <section class="main">
+        <h2  data-i18n="text1" class="text1">
+          Welcome, My Name Is Muhammed and This Is My Web Site
+        </h2>
+        <h2 data-i18n="text2" class="text2">
+          Front-End Developer and Programmer
+        </h2>
+        <p data-i18n="paragraph" class="paragraph">
+          I'm 16 years old and I'm high school student.I'm from Syria and i live
+          in france. I have been learning programming for three years.
+        </p>
+        <div class="My-Goals">
+          <h1 data-i18n="Goals-title" class="Goal-title">My Goals :</h1>
+          <h3 data-i18n="Goal1" class="Goal1 Goals">Full Stack Developer</h3>
+          <h3 data-i18n="Goal2" class="Goal2 Goals">
+            Master of Cyber Security
+          </h3>
+        </div>
+        <img class="profile-image" src="Muhammed.jpg" alt="My Photo" />
+      </section>
+      <section class="MySkills" id="MySkills">
+        <h1 data-i18n="Skills-title" class="title">My Skills</h1>
+        <br />
+        <h1 data-aos="fade-down" class="devicon-cplusplus-plain colored" id="CPP">c++</h1>
+        <h1 data-aos="fade-down" class="fa-brands fa-js" id="JAVASCRIPT">java script</h1>
+        <h1 data-aos="fade-down" class="fa-brands fa-python" id="PYTHON">python</h1>
+        <h1 data-aos="fade-down" class="fa-brands fa-html5" id="HTML">html</h1>
+        <h1 data-aos="fade-down" class="fa-brands fa-css3-alt" id="CSS">css</h1>
+        <h1 data-aos="fade-down" class="fa-brands fa-php" id="PHP">php</h1>
+      </section>
+      <!-- Projects Section-->
+      <section id="Projects">
+        <section  class="Projects">
+          <h1 data-i18n="Project-title" class="Project-title">My Projects</h1>
+          <div data-aos="zoom-in" class="Project-card1">
+            <img src="Animated Login.png" alt="Animated Login" />
+            <h2>
+              <span data-i18n="card1-title">Animated Login</span
+              ><a
+                href="https://github.com/mhmd2587/Animated-Login.git"
+                target="_blank"
+                ><i data-i18n="card1-title" class="fa-brands fa-github">
+                  Animated Login</i
+                ></a
+              >
+            </h2>
+          </div>
+          <div data-aos="zoom-in" class="Project-card2">
+            <img src="Text To Speech.png" alt="Text To Speech" />
+            <h2>
+              <span data-i18n="card2-title">Text To Speech</span
+              ><a
+                href="https://github.com/mhmd2587/Text-To-Speech.git"
+                target="_blank"
+                ><i data-i18n="card2-title" class="fa-brands fa-github">
+                  Text To Speech</i
+                ></a
+              >
+            </h2>
+          </div>
+        </section>
+      </section>
+      <!-- Contact Section-->
+      <section class="Contact" id="Contact">
+        <h1 data-i18n="nav4" class="contact-title">Contact Me</h1>
+        <div class="icons">
+          <a
+            class="instagram"
+            href="https://www.instagram.com/mtspm15/"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            class="github"
+            href="https://github.com/mhmd2587/MHMD-DEV"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/muhamed-alali-6258792b0/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info">
+            <h3 data-i18n="Contact-info">mhy5285@gmail.com</h3>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <h3 data-i18n="footer-1">Made By</h3>
+        <h2 data-i18n="footer-2" class="span">MHMD</h2>
+      </footer>
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+      <script src="script.js"></script>
+    </section>
+  </body>
+</html>
