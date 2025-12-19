@@ -45,7 +45,7 @@ async function openTranslation() {
     localStorage.setItem("language", selectedLang); // حفظ اللغة المختارة
 
     // تحميل ملف الترجمة المناسب
-    const res = await fetch(`lang/${selectedLang}.json`);
+    const res = await fetch(`${selectedLang}.json`);
     const translations = await res.json();
 
     // تحديث النصوص حسب data-i18n
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     const savedLang = localStorage.getItem("language") || "en";
     document.getElementById("langSelect").value = savedLang; // ضبط قيمة الـ select
 
-    const res = await fetch(`lang/${savedLang}.json`);
+    const res = await fetch(`${savedLang}.json`);
     const translations = await res.json();
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -112,3 +112,4 @@ document.addEventListener('DOMContentLoaded', function() {
         AOS.init({ duration: 1000, once: true });
     }
 });
+
