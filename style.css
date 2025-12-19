@@ -417,11 +417,12 @@ img {
 }
 
 @media (max-width: 350px) {
-  .logo{
+  .nav1{
   position: relative;
   right: 900px;
   }
 }
+
 
 
 
