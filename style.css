@@ -3,6 +3,7 @@
 }
 html, body{
   width: 100%;
+  overflow-x: hidden;
 }
 ::selection {
   color: red;
@@ -415,17 +416,4 @@ img {
     display: none;
   }
 }
-
-@media (max-width: 350px) {
-  .nav1{
-  position: relative;
-  right: 900px;
-  }
-}
-
-
-
-
-
-
 
