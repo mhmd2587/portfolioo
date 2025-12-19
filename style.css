@@ -410,11 +410,12 @@ img {
   }
   .nav1{
     position: relative;
-    left: 270px;
+    left: 235px;
   }
   .navigition .nav2,.nav3,.nav4{
     display: none;
   }
 }
+
 
 
