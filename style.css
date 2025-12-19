@@ -419,9 +419,10 @@ img {
 @media (max-width: 350px) {
   .logo{
   position: relative;
-  right: 600px;
+  right: 900px;
   }
 }
+
 
 
 
