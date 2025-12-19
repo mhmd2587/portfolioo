@@ -332,7 +332,7 @@ img {
   left: 685px;
   color: rgb(12, 70, 15);
 }
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 350px) and (max-width: 600px) {
   #PYTHON {
     color: #3776ab;
     margin-left: 20px;
@@ -412,5 +412,6 @@ img {
     display: none;
   }
 }
+
 
 
