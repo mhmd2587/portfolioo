@@ -1,7 +1,7 @@
 * {
   scroll-behavior: smooth;
 }
-html, body{
+html, body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -104,7 +104,7 @@ select{
   text-align: center;
 }
 .paragraph {
-  white-space: pre-wrap;
+  
 }
 .profile-image {
   border-radius: 50%;
@@ -339,16 +339,35 @@ img {
 @media (min-width: 350px) and (max-width: 600px) {
   #PYTHON {
     color: #3776ab;
-    margin-left: 20px;
+    position: relative;
+    left: 50px;
   }
   #CSS {
     color: #1572b6;
-    margin-left: 20px;
+    position: relative;
+    left: 55px;
   }
   #CPP {
     font-size: 3.2em;
     width: 300px;
-    margin-left: 20px;
+    position: relative;
+    left: 50px;
+  }
+  #JAVASCRIPT {
+    position: relative;
+    right: 50px;
+  }
+  #HTML {
+    position: relative;right: 55px;
+  }
+  #PHP {
+    font-size: 2em;
+    width: 300px;
+    position: relative;
+    right: 55px;
+  }
+  .main .text2{
+    width: 95%;
   }
   .My-Goals{
     top: 370px;
@@ -393,24 +412,29 @@ img {
     margin-top: 200px;
   }
   .contact-title{
-    left: 175px;
+    left: 155px;
   }
   .Contact .card{
-    margin-left: 40px;
+    margin-left: 30px;
+    width: 300px;
+  }
+  .Contact .card .icon i{
+    position: relative;
+    right: 20px;
   }
   .footer h3{
     position: absolute;
     left: 160px;
-    top: 3320px;
+    top: 3375px;
   }
   .footer h2{
     position: absolute;
     left: 245px;
-    top: 3317px;
+    top: 3372px;
   }
   .nav1{
     position: relative;
-    left: 90px;
+    left: 200px;
   }
   .navigition .nav2,.nav3,.nav4{
     display: none;
@@ -418,13 +442,20 @@ img {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+@media(width:390px){
+    #CPP{
+      position: relative;
+      left: 60px;
+    }
+    #PYTHON{
+      position: relative;
+      left: 70px;
+      font-size: 1.7em;
+    }
+    #CSS{
+      position: relative;
+      top: 5px;
+      left: 80px;
+      font-size: 1.8em;
+    }
+}
