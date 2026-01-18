@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var span = document.querySelector(".up");
     if(span){
         window.onscroll = function() {
-            span.style.display = (window.scrollY >= 575) ? "block" : "none";
+            span.style.display = (window.scrollY >= 375) ? "block" : "none";
         };
 
         span.onclick = function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: "auto" });
         };
     }
 });
@@ -57,7 +57,7 @@ async function openTranslation() {
     // ضبط اتجاه الصفحة واختيار CSS المناسب
     if (selectedLang === "ar") {
         document.documentElement.lang = "ar";
-        //document.documentElement.setAttribute("dir", "rtl");
+        // document.documentElement.setAttribute("dir", "rtl");
 
         // تحميل CSS العربية
         loadCSS("styleAR.css");
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     } else {
         document.documentElement.lang = savedLang;
         document.documentElement.setAttribute("dir", "ltr");
-        loadCSS("styleEN.css");
+        loadCSS("style.css");
     }
 });
 
@@ -112,4 +112,3 @@ document.addEventListener('DOMContentLoaded', function() {
         AOS.init({ duration: 1000, once: true });
     }
 });
-

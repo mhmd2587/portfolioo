@@ -1,444 +1,62 @@
-* {
-  scroll-behavior: smooth;
-}
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-::selection {
-  color: red;
-}
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-body {
-  background: radial-gradient(circle at center, #1a002b, #0a0015 80%);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  justify-content: center;
-}
-.header {
-  width: 100%;
-  position: fixed;
-  background-color: #1a002b;
-  height: 60px;
-  z-index: 999;
-}
-select{
-    background-color: #1a002b;
-    color: white;
-}
-/*.navigition {
-  display: flex;
-  padding-top: 20px;
-  margin-left: 650px;
-}*/
-/*.navigition a {
-  color: blue;
-  text-decoration: none;
-  padding-left: 100px;
-  animation: headerr 3s forwards;
-  scroll-behavior: smooth;
-}*/
-.navigition .nav2,
-.nav3,
-.nav4 {
-  text-decoration: none;
-  position: relative;
-  left: 700px;
-  padding: 20px;
-  margin-left: 50px;
-}
-
-.link-effect {
-  position: relative;
-  color: #007bff; /* لون النص الافتراضي */
-  text-decoration: none;
-}
-
-.link-effect::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -3px; /* تعديل الارتفاع للخط أسفل الرابط */
-  left: 0;
-  background-color: #007bff;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-
-.link-effect:hover::after {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.nav1 {
-  text-decoration: none;
-  padding: 20px;
-}
-/*.navigition a:hover {
-  
-}*/
-.logo {
-  position: relative;
-  right: 700px;
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 100px;
-  line-height: 25px;
-}
-.main .text1,
-.text2 {
-  text-align: center;
-}
-.paragraph {
-  
-}
-.profile-image {
-  border-radius: 50%;
-  padding: 6px;
-  background: radial-gradient(circle, #9d00ff, #ff0077);
-  box-shadow: 0 0 25px #ff00cc, 0 0 50px #9900ff;
-  width: 240px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  left: 970px;
-  bottom: 200px;
-}
-.profile-image img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.My-Goals {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 60px;
-}
-.Goals {
-  color: blue;
-  background-color: aqua;
-  width: 250px;
-  padding: 10px 0px 10px 40px;
-  border-radius: 30px;
-  box-shadow: 0 0 25px blue, 0 0 50px #9900ff;
-}
-.Goals:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-.MySkills {
-  height: 620px;
-  display: grid;
-  grid-template-columns: repeat(2, 250px);
-  justify-content: center;
-}
-.title {
-  color: blue;
-  margin-left: 190px;
-  margin-top: 100px;
-  width: 200px;
-}
-#PYTHON {
-  color: #3776ab;
-}
-#PHP {
-  color: #777bb4;
-  margin-left: 108px;
-}
-#HTML {
-  color: #e34f26;
-  margin-left: 100px;
-}
-#CSS {
-  color: #1572b6;
-}
-#JAVASCRIPT {
-  color: #f7df1e;
-  margin-left: 100px;
-}
-#CPP {
-  font-size: 3.2em;
-  width: 300px;
-}
-h1 {
-  white-space: pre-wrap;
-}
-.up {
-  position: fixed;
-  bottom: 10px; /* تعديل الموضع من الأسفل */
-  right: 10px; /* تعديل الموضع من اليمين */
-  background-color: rgb(54, 84, 119); /* لون الزر */
-  color: white; /* لون النص */
-  font-weight: bold;
-  font-size: 12px; /* حجم النص */
-  padding: 10px; /* حجم الزر */
-  margin-bottom: 35px;
-  border-radius: 65%; /* شكل الزر */
-  font-family: Arial, Tahoma; /* نوع الخط */
-  cursor: pointer; /* تغيير المؤشر عند المرور فوق الزر */
-  display: none; /* إخفاء الزر بشكل افتراضي */
-  z-index: 999;
-}
-.hamburger-menu{
-    display: none;
-}
-.up.show {
-  display: block; /* عرض الزر عند إضافة الكلاس show */
-}
-.up:hover {
-  opacity: 0.7;
-  font-size: 0.8em;
-}
-.Projects {
-  display: flex;
-  justify-content: center;
-  height: 650px;
-}
-.Projects .Project-title {
-  color: blue;
-  position: relative;
-  left: 635px;
-  top: 60px;
-}
-img {
-  height: 300px;
-  width: 470px;
-}
-.Project-card1 {
-  height: 380px;
-  margin-right: 150px;
-  margin-top: 220px;
-  border: dashed;
-  padding: 10px;
-}
-.Project-card1 h2 > span,
-.Project-card2 h2 > span {
-  color: aqua;
-  margin-left: 10px;
-}
-.Project-card1 a,
-.Project-card2 a {
-  text-decoration: none;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(61, 78, 153, 0.678),
-    rgba(255, 0, 0, 0.596)
-  );
-  color: black;
-  width: 300px;
-  height: 40px;
-  padding: 15px;
-  font-size: 0.8em;
-  margin-left: 20px;
-  white-space: pre-wrap;
-  border-radius: 25px;
-}
-.Project-card1 a:hover,
-.Project-card2 a:hover {
-  opacity: 0.8;
-}
-.Project-card2 {
-  height: 380px;
-  margin-right: 140px;
-  margin-top: 220px;
-  border: dashed;
-  padding: 10px;
-}
-.contact-title {
-  position: absolute;
-  left: 610px;
-  margin-top: 100px;
-  color: blue;
-}
-.Contact {
-  height: 700px;
-}
-.icons {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 250px;
-  right: 30px;
-}
-.icons a {
-  margin-left: 50px;
-  font-size: 3em;
-}
-.icons a:hover {
-  transform: translate(7px, -5px);
-}
-.instagram {
-  color: rgb(196, 10, 10);
-}
-.github {
-  color: green;
-}
-.Contact .card {
-  color: white;
-  width: 350px;
-  height: 200px;
-  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.6);
-  border-radius: 10px;
-  padding: 50px 25px 0px 25px;
-  margin: 15px;
-  transition: 0.7s ease;
-  margin-top: 325px;
-  margin-left: 460px;
-}
-.Contact .card:hover {
-  transform: scale(1.1);
-  background-color: #2980b9;
-}
-.card .icon {
-  color: blue;
-  font-size: 6em;
-  margin-left: 125px;
-}
-.info {
-  text-align: center;
-}
-.info h3 {
-  color: blue;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 10px;
-}
-.footer {
-  background-color: rgb(50, 100, 150);
-  height: 80px;
-}
-.footer h3 {
-  position: absolute;
-  left: 600px;
-  top: 2720px;
-}
-.footer h2 {
-  position: absolute;
-  top: 2715px;
-  left: 685px;
-  color: rgb(12, 70, 15);
-}
-@media (min-width: 400px) and (max-width: 600px) {
-  #PYTHON {
-    color: #3776ab;
+.navigation{
+    display: flex;
+    flex-flow: row-reverse;
     position: relative;
-    left: 50px;
-  }
-  #CSS {
-    color: #1572b6;
+    left: 20px;
+    width: 1280px;
+}.nav1{
     position: relative;
-    left: 55px;
-  }
-  #CPP {
-    font-size: 3.2em;
-    width: 300px;
+    left: 730px;
+}.profile-image{
     position: relative;
-    left: 50px;
-  }
-  #JAVASCRIPT {
+    left: 300px;
+    bottom: 250px;
+}.paragraph{
+    align-self: flex-end;
+    direction: rtl;
+}.My-Goals{
+    display: flex;
+    flex-flow: column wrap;
+}.Goals{
+    align-self: flex-end;
+}.Goal-title{
+    align-self: flex-end;
+}.Goal1{
+    width: 180px;
+    padding-left: 80px;
+} .Project-card1 span,.Project-card2 span{
     position: relative;
-    right: 50px;
-  }
-  #HTML {
-    position: relative;right: 55px;
-  }
-  #PHP {
-    font-size: 2em;
-    width: 300px;
-    position: relative;
-    right: 55px;
-  }
-  .main .text2{
-    width: 95%;
-  }
-  .My-Goals{
-    top: 370px;
-  }
-  .profile-image{
-    left: 80px;
-    bottom: 210px;
-  }
-  .Projects{
-    display: grid;
-    height: 1200px;
-  }
-  img{
-    width: 300px;
-    height: 330px;
-  }
-  .Projects .Project-title {
-  color: blue;
-  position: relative;
-  left: 230px;
-  top: 0px;
-}
-  .Project-card1,.Project-card2{
-    margin-left: 130px;
-    width: 300px;
-    height: 450px;
-    margin-top: -100px;
-  }
-  .Project-card2{
-    width: 301px;
-  }
-  .Project-card1 a{
-    position: relative;
-    top: 25px;
-  }
-  .Project-card2 a{
-    position: relative;
-    top: 25px;
-  }
-  .title{
-    margin-left: 200px;
-    margin-top: 200px;
-  }
-  .contact-title{
-    left: 155px;
-  }
-  .Contact .card{
-    margin-left: 30px;
-    width: 300px;
-  }
-  .Contact .card .icon i{
-    position: relative;
-    right: 20px;
-  }
-  .footer h3{
+    left: 240px;
+}.Project-card1 a{
     position: absolute;
-    left: 160px;
-    top: 3295px;
-  }
-  .footer h2{
+    top: 435px;
+}.Project-card2 a{
     position: absolute;
-    left: 255px;
-    top: 3290px;
-  }
-  .nav1{
-    position: relative;
-    left: 200px;
-  }
-  .navigition .nav2,.nav3,.nav4{
-    display: none;
-  }
+    top: 435px;
+    left: 35px;
+}.footer{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}@media (min-width: 350px) and (max-width: 600px){
+    .navigation{
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        gap: 20px;
+        position: relative;
+        left: 40px;
+    }.nav1{
+        position: relative;
+        left: 10px;
+    }.Goal1{
+        width: 210px;
+    }.profile-image{
+        position: relative;
+        left: 100px;
+    }.Project-card1 span{
+        position: relative;
+        left: 215px;
+    }.footer{
+        width: 425px;
+    }
 }
-
-
