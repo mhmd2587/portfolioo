@@ -7,7 +7,7 @@
 }.up {
   position: fixed;
   bottom: 10px; /* تعديل الموضع من الأسفل */
-  right: 10px; /* تعديل الموضع من اليمين */
+  right: 30px; /* تعديل الموضع من اليمين */
   background-color: rgb(54, 84, 119); /* لون الزر */
   color: white; /* لون النص */
   font-weight: bold;
@@ -253,10 +253,11 @@
         height: 1250px;
     }.Project-card1,.Project-card2{
         position: relative;
-        left: 15px;
+        left: 0px;
     }.Contact .card{
         width: 310px;
     }.footer{
         width: 425px;
     }
+
 }
