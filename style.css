@@ -1,10 +1,14 @@
-*{
-    scroll-behavior: smooth;
-}body{
+* {
+  scroll-behavior: smooth;
+  /* border: 1px solid red; */
+}
+body {
   background: radial-gradient(circle at center, #1a002b, #0a0015 80%);
-}::selection{
-    color: red;
-}.up {
+}
+::selection {
+  color: red;
+}
+.up {
   position: fixed;
   bottom: 10px; /* تعديل الموضع من الأسفل */
   right: 30px; /* تعديل الموضع من اليمين */
@@ -19,36 +23,43 @@
   cursor: pointer; /* تغيير المؤشر عند المرور فوق الزر */
   display: none; /* إخفاء الزر بشكل افتراضي */
   z-index: 999;
-}.header{
-    padding: 20px 50px 20px 0px;
-    position:fixed;
-    z-index: 999;
-    background-color: #0F172A;
-}.navigation{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    gap: 50px;
-    width: 1310px;
-}.nav1{
-    position: relative;
-    right: 700px;
-}select{
-    color: #007bff;
-    border: none;
-    background: #0F172A;
-}.main{
-    position: relative;
-    top: 120px;
-    display: flex;
-    flex-flow: column wrap;
-    height: 900px;
-}.link-effect {
+}
+.header {
+  padding: 20px 50px 20px 0px;
+  position: fixed;
+  z-index: 999;
+  background-color: #0f172a;
+}
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap: 50px;
+  width: 1310px;
+}
+.nav1 {
+  position: relative;
+  right: 700px;
+}
+select {
+  color: #007bff;
+  border: none;
+  background: #0f172a;
+}
+.main {
+  position: relative;
+  top: 120px;
+  display: flex;
+  flex-flow: column wrap;
+  height: 900px;
+}
+.link-effect {
   position: relative;
   color: #007bff; /* لون النص الافتراضي */
   text-decoration: none;
-}.link-effect::after {
-  content: '';
+}
+.link-effect::after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -58,206 +69,366 @@
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
-}.link-effect:hover::after {
+}
+.link-effect:hover::after {
   visibility: visible;
   transform: scaleX(1);
-}.text1,.text2{
-    align-self: center;
-    color: white;
-}.paragraph{
-    width: 250px;
-    color: rgb(99, 99, 99);
-}.Goal-title{
-    color: blue;
-}.Goals{
-    color: blue;
-    background-color: aqua;
-    width: 220px;
-    padding: 10px 0px 10px 40px;
-    border-radius: 150px;
-    box-shadow: 0 0 25px blue, 0 0 50px #9900ff;
-}.Goals:hover{
-    opacity: 0.5;
-    cursor: pointer;
-}.profile-image{
-    border-radius: 50%;
-    padding: 6px;
-    background: radial-gradient(circle, #9d00ff, #ff0077);
-    box-shadow: 0 0 25px #ff00cc, 0 0 50px #9900ff;
-    width: 240px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 800px;
-    bottom: 250px;
-}.profile-image img {
+}
+.text1,
+.text2 {
+  align-self: center;
+  color: white;
+}
+.paragraph {
+  width: 250px;
+  color: rgb(99, 99, 99);
+}
+.Goal-title {
+  color: blue;
+}
+.Goals {
+  color: blue;
+  background-color: aqua;
+  width: 220px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 150px;
+  box-shadow:
+    0 0 25px blue,
+    0 0 50px #9900ff;
+}
+.Goals:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.profile-image {
+  border-radius: 50%;
+  padding: 6px;
+  background: radial-gradient(circle, #9d00ff, #ff0077);
+  box-shadow:
+    0 0 25px #ff00cc,
+    0 0 50px #9900ff;
+  width: 240px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 800px;
+  bottom: 250px;
+}
+.profile-image img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}.MySkills{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    height: 550px;
-}.MySkills .title{
-    position: relative;
-    top: 20px;
-    text-align: center;
-    color: #007bff;
-}.languages{
+}
+.MySkills {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+}
+.MySkills .title {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  color: #007bff;
+}
+.languages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  font-size: 3em;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+.devicon-html5-plain,
+.devicon-css3-plain,
+.devicon-php-plain,
+.devicon-cplusplus-plain {
+  font-size: 1.4em;
+}
+ .Project-title {
+  position: relative;
+  top: 80px;
+  text-align: center;
+  color: #007bff;
+}
+#Projects{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 100px;
-    font-size: 3em;
+    grid-template-columns: 1fr;
+    height: 500px;
+}
+.progress{
+    /* position: relative; */
+    margin-left: 600px;
+    margin-top: 100px;
+    width: 150px;
+}
+.progress > span{
     position: relative;
-    top: 100px;
-}.devicon-html5-plain,.devicon-css3-plain,.devicon-php-plain,.devicon-cplusplus-plain{
-    font-size: 1.4em;
-}.Project-title{
-    position: relative;
-    top: 80px;
-    text-align: center;
-    color: #007bff;
-}.Project-cards{
-    position: relative;
-    top: 120px;
-    display: flex;
-    height: 600px;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-}.Project-card2 img{
-    height: 425px;
-    width: 380px;
-}.Project-card1,.Project-card2{
-    position: relative;
-    top: 0px;
-    width: 380px;
-    height: 465px;
-    border: white dashed 3px;
-    padding: 7px;
-}.Project-card1 span,.Project-card2 span{
-    color: #306998;
-    font-size: 1.2em;
-    position: relative;
-    top: 5px;
-    left: 15px;
-}.Project-card1 a,.Project-card2 a{
-    font-size: 1em;
-    position: relative;
-    top: 7px;
-    left: 40px;
-    background-color: aqua;
-    padding: 10px;
-    border-radius: 100px;
-}.Project-card1 a:hover,.Project-card2 a:hover{
-    opacity: 0.5;
-}.Contact{
-    position: relative;
-    top: 120px;
-    height: 650px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}.contact-title{
-    position: relative;
-    top: 30px;
-    color: #007bff;
-}.icons{
-    height: 100px;
-    width: 300px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    position: relative;
-    top: 50px;
-}.icons a{
-    font-size: 2.2em;
-}.icons a:hover{
-    transform: translate(-5px, -7px);
-    color: white;
-}.Contact .card{
-    position: relative;
-    top: 50px;
-    width: 400px;
-    height: 250px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 350px;
-    height: 200px;
-    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    padding: 50px 25px 0px 25px;
-    margin: 15px;
-    transition: 0.7s ease;
-    margin-bottom: 150px;
-}.icon{
-    color: blue;
-    font-size: 7em;
-}.Contact .card:hover {
+    top: 75px;
+    left: 25px;
+}
+/*.Project-cards {
+  position: relative;
+  top: 120px;
+  display: flex;
+  height: 600px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.Project-card2 img {
+  height: 425px;
+  width: 380px;
+}
+.Project-card1,
+.Project-card2 {
+  position: relative;
+  top: 0px;
+  width: 380px;
+  height: 465px;
+  border: white dashed 3px;
+  padding: 7px;
+}
+.Project-card1 span,
+.Project-card2 span {
+  color: #306998;
+  font-size: 1.2em;
+  position: relative;
+  top: 5px;
+  left: 15px;
+}
+.Project-card1 a,
+.Project-card2 a {
+  font-size: 1em;
+  position: relative;
+  top: 7px;
+  left: 40px;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 100px;
+}
+.Project-card1 a:hover,
+.Project-card2 a:hover {
+  opacity: 0.5;
+} */
+.Contact {
+  position: relative;
+  top: 120px;
+  height: 750px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contact-title {
+  position: relative;
+  top: 30px;
+  color: #007bff;
+}
+.icons {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  top: 50px;
+}
+.icons a {
+  font-size: 2.2em;
+}
+.icons a:hover {
+  transform: translate(-5px, -7px);
+  color: white;
+}
+.Contact .card {
+  position: relative;
+  /* top: 50px; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 150px;
+  height: 100px;
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 50px 25px 0px 25px;
+  transition: 0.7s ease;
+}
+.card > a > i {
+  position: relative;
+  bottom: 30px;
+  color: blue;
+  font-size: 4em;
+}
+.card > a {
+  position: relative;
+  bottom: 20px;
+}
+.Contact .card:hover {
   transform: scale(1.1);
   background-color: #2980b9;
-}.footer{
-    position: relative;
-    top: 50px;
-    background-color: #9d00ff;
+}
+.contact-cards {
+  position: relative;
+  top: 35px;
+  height: 550px;
+  width: 500px;
+  padding: 30px;
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.row2 {
+  position: relative;
+  bottom: 35px;
+}
+.cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(1, 20, 100);
+  border-radius: 30px;
+  height: 50px;
+  width: 300px;
+  position: relative;
+  left: 110px;
+  bottom: 50px;
+}
+.cv:hover{
+  opacity: 0.8;
+  box-shadow: 0px 0px 30px rgb(20, 30, 1000);
+    
+}
+.cv > a {
+  color: black;
+  text-decoration: none;
+}
+.footer {
+  position: relative;
+  top: 50px;
+  /* top: 20px; */
+  background-color: #9d00ff;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.span {
+  color: rgb(17, 25, 146);
+}
+.wheel {
+  width: 120px;
+  height: 120px;
+  border: 10px solid #ddd;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 350px) and (max-width: 600px) {
+  .header{
+    width: 340px;
+  }
+  .navigation {
+    width: 365px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-}.span{
-    color: rgb(17, 25, 146);
-}@media (min-width: 350px) and (max-width: 600px){
-    .navigation{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        gap: 20px;
-        position: relative;
-        left: 40px;
-    }.nav1{
-        position: relative;
-        left: -10px;
-    }.main{
-        height: 900px;
-    }.text1,.text2{
-        font-size: 0.8em;
-    }.Goals{
-        width: 250px;
-    }.profile-image{
-        position: relative;
-        left: 50px;
-        top: 40px;
-    }.MySkills{
-        height: 800px;
-    }.MySkills .title{
-        position: relative;
-        left: 20px;
-    }.languages{
-        font-size: 1em;
-        position: relative;
-        left: 25px;
-    }#Projects{
-        height: 1250px;
-    }.Project-card1,.Project-card2{
-        position: relative;
-        left: 0px;
-    }.Contact .card{
-        width: 310px;
-    }.footer{
-        width: 425px;
-    }
-
+    position: relative;
+    left: 20px;
+  }
+  .nav1 {
+    position: relative;
+    left: -10px;
+  }
+  .main {
+    height: 900px;
+  }
+  .text1,
+  .text2 {
+    font-size: 0.8em;
+  }
+  .Goals {
+    width: 250px;
+  }
+  .profile-image {
+    position: relative;
+    left: 50px;
+    top: 80px;
+  }
+  .MySkills {
+    height: 800px;
+  }
+  .MySkills .title {
+    position: relative;
+    left: 1px;
+  }
+  .languages {
+    font-size: 1em;
+    position: relative;
+    left: 3px;
+  }
+  #Projects {
+    height: 500px;
+  }
+  .Project-card1,
+  .Project-card2 {
+    position: relative;
+    left: 0px;
+  }
+  .Contact .card {
+    width: 310px;
+  }
+  .footer {
+    width: 390px;
+  }
+  .Contact{
+    height: 1200px;
+  }
+  .contact-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 300px;
+    gap: 5px;
+    height: 1000px;
+  }
+  .row1{
+    position: relative;
+    right: 20px;
+  }
+  .row2{
+    position: relative;
+    top: 10px;
+    right: 20px;
+  }
+  .contact-cards > .card{
+    width: 280px;
+  }
+  .cv{
+    position: relative;
+    top: 5px;
+    left: -0px;
+  }
+  .progress{
+    margin-top: 200px;
+    margin-left: 130px;
+  }
 }
+
