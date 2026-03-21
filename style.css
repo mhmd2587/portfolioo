@@ -3,7 +3,8 @@
   /* border: 1px solid red; */
 }
 body {
-  background: radial-gradient(circle at center, #1a002b, #0a0015 80%);
+  /* background: radial-gradient(circle at center, #1a002b, #0a0015 80%); */
+  background: radial-gradient(at center, #6a5acd 0%, #1e1f4c 60%, #0d0d2b 100%);
 }
 ::selection {
   color: red;
@@ -23,6 +24,9 @@ body {
   cursor: pointer; /* تغيير المؤشر عند المرور فوق الزر */
   display: none; /* إخفاء الزر بشكل افتراضي */
   z-index: 999;
+}
+.up:hover {
+  background-color: #2980b9;
 }
 .header {
   padding: 20px 50px 20px 0px;
@@ -77,16 +81,29 @@ select {
 .text1,
 .text2 {
   align-self: center;
-  color: white;
+  color: #7ab8ff;
 }
 .paragraph {
   width: 250px;
-  color: rgb(99, 99, 99);
+  /* color: rgb(99, 99, 99); */
+  color: #cfa9ff;
+  position: relative;
+  top: 50px;
 }
 .Goal-title {
   color: blue;
+  position: relative;
+  top: 20px;
+}
+.My-Goals {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  top: 50px;
 }
 .Goals {
+  position: relative;
+  top: 50px;
   color: blue;
   background-color: aqua;
   width: 220px;
@@ -99,14 +116,30 @@ select {
 .Goals:hover {
   opacity: 0.5;
   cursor: pointer;
+  animation: Goals 2s linear infinite;
+}
+@keyframes Goals {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(10deg);
+  }
+  75% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
 .profile-image {
   border-radius: 50%;
   padding: 6px;
-  background: radial-gradient(circle, #9d00ff, #ff0077);
   box-shadow:
-    0 0 25px #ff00cc,
-    0 0 50px #9900ff;
+    0 0 25px white,
+    0 0 50px aqua;
+  background: radial-gradient(circle at center, #7b61ff 0%, #2e1a5c 70%);
+  border-radius: 50%;
   width: 240px;
   height: 300px;
   display: flex;
@@ -150,27 +183,28 @@ select {
 .devicon-cplusplus-plain {
   font-size: 1.4em;
 }
- .Project-title {
+.Project-title {
   position: relative;
   top: 80px;
   text-align: center;
   color: #007bff;
 }
-#Projects{
-    display: grid;
-    grid-template-columns: 1fr;
-    height: 500px;
+#Projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 500px;
 }
-.progress{
-    /* position: relative; */
-    margin-left: 600px;
-    margin-top: 100px;
-    width: 150px;
+.progress {
+  /* position: relative; */
+  margin-left: 600px;
+  margin-top: 100px;
+  width: 150px;
+  color: #2980b9;
 }
-.progress > span{
-    position: relative;
-    top: 75px;
-    left: 25px;
+.progress > span {
+  position: relative;
+  top: 75px;
+  left: 25px;
 }
 /*.Project-cards {
   position: relative;
@@ -266,9 +300,30 @@ select {
 }
 .card > a > i {
   position: relative;
-  bottom: 30px;
+  bottom: 25px;
   color: blue;
   font-size: 4em;
+  animation: cards 2s linear infinite;
+}
+@keyframes cards{
+  0%{
+    bottom: 25px;
+  }
+  /* 20%{
+    bottom: 25px;
+  }
+  40%{
+    bottom: 20px;
+  } */
+  60%{
+    bottom: 15px;
+  }
+  80%{
+    bottom: 20px;
+  }
+  100%{
+    bottom: 25px;
+  }
 }
 .card > a {
   position: relative;
@@ -296,7 +351,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(1, 20, 100);
+  background-color:#9900ff ;
   border-radius: 30px;
   height: 50px;
   width: 300px;
@@ -304,10 +359,9 @@ select {
   left: 110px;
   bottom: 50px;
 }
-.cv:hover{
+.cv:hover {
   opacity: 0.8;
   box-shadow: 0px 0px 30px rgb(20, 30, 1000);
-    
 }
 .cv > a {
   color: black;
@@ -337,12 +391,16 @@ select {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 350px) and (max-width: 600px) {
-  .header{
+  .header {
     width: 340px;
   }
   .navigation {
@@ -399,36 +457,35 @@ select {
   .footer {
     width: 390px;
   }
-  .Contact{
+  .Contact {
     height: 1200px;
   }
-  .contact-cards{
+  .contact-cards {
     display: grid;
     grid-template-columns: 1fr;
     width: 300px;
     gap: 5px;
     height: 1000px;
   }
-  .row1{
+  .row1 {
     position: relative;
     right: 20px;
   }
-  .row2{
+  .row2 {
     position: relative;
     top: 10px;
     right: 20px;
   }
-  .contact-cards > .card{
+  .contact-cards > .card {
     width: 280px;
   }
-  .cv{
+  .cv {
     position: relative;
     top: 5px;
     left: -0px;
   }
-  .progress{
+  .progress {
     margin-top: 200px;
     margin-left: 130px;
   }
 }
-
